@@ -1,0 +1,101 @@
+@import 'mixins.scss';
+
+.question {
+
+    &__wrapper {
+        display: flex;
+        position: fixed;
+        top: 34%;
+        right: -280px;
+        transition: all 0.5s ease;
+        box-shadow: $box-shadow;
+        border-radius: 24px 0px 0px 24px;
+        &.active {
+            right: 0;
+        }
+    }
+
+    &__title {
+        width: 56px;
+        height: 190px;
+        background: $bg-color;
+        border-radius: 24px 0px 0px 24px;
+        border: 0;
+        position: relative;
+        cursor: pointer;
+
+        &:focus {
+            outline: 0;
+        }
+        
+        & p {
+            position: absolute;
+            top: 84px;
+            left: -40px;
+            @include make-font-size (18px, 22px);
+            font-weight: 700;
+            color: #FFF;
+            transform: rotate(-90deg);
+            white-space: nowrap;
+        }
+    }
+
+    &__form {
+        padding-top: 32px;
+        width: 262px;
+        height: 190px;
+    }
+
+    &__group {
+        position: relative;
+    }
+
+    &__input {
+        @include make-font-size (18px, 24px);
+        padding: 0 5px;
+        width: 224px;
+        height: 36px;
+
+        &-email {
+            margin-bottom: 24px;
+        }
+    } 
+
+    &__button.button {
+        font-weight: 700;
+        @include make-font-size (18px, 21px);
+        font-family: 'Rubik', sans-serif;
+        padding: 0;
+        margin-top: 12px;
+        width: 224px;
+        height: 36px;
+    }
+
+    &__accept {
+        text-align: center;
+        width: 262px;
+        height: 190px;
+
+        & img {
+            margin-top: 44px;
+            width: 50px;
+        }
+
+        &-text {
+            max-width: 210px;
+            margin: 22px auto 0;
+            font-weight: 400;
+            @include make-font-size (13px, 15px);
+        }
+    }
+
+    &__error {
+        margin-left: 66px;
+        margin-top: -22px;
+
+        &-text {
+            margin-left: 5px;
+            @include make-font-size (11px, 13px);
+        }
+    }
+}

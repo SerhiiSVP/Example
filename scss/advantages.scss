@@ -1,0 +1,106 @@
+@import 'mixins.scss';
+
+.advantages {
+    padding: 32px 0 96px;
+}
+
+.advantages__title {
+    margin-bottom: 56px;    
+}
+
+.advantages__skills {
+    display: flex;
+    justify-content: space-around;
+    background: $bg-color;
+    padding: 56px 0px;
+    border-radius: 27px;
+    box-shadow: $box-shadow;
+}
+
+.advantages__skill {
+    max-width: 272px;
+    text-align: center;
+
+    &-img {
+        max-height: 144px;
+        width: auto;
+        margin-bottom: 32px;
+    }
+
+    &-title {
+        margin-bottom: 16px;
+        @include make-font-size (24px, 28px);
+    }
+
+    &-text {
+        font-weight: 400;
+    }
+}
+
+// Adaptive ----------------
+
+@media screen and (max-width: 960px) {
+    .advantages {
+        padding-bottom: 64px;
+    }
+
+    .advantages__title h2 {
+        @include make-font-size (24px, 28px);
+    }
+
+    .advantages__skills {
+        padding: 32px 0;
+    }
+
+    .advantages__skill-img {
+        max-height: 76px;
+        margin-bottom: 16px;
+    }
+
+    .advantages__skill-title {
+        @include make-font-size (20px, 24px);
+    }
+
+    .advantages__skill-text {
+        @include make-font-size (13px, 18px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .advantages__skill {
+        max-width: 170px;
+
+        &-title {
+            margin-bottom: 8px;
+            @include make-font-size (16px, 19px);
+        }
+    }  
+}
+
+@media screen and (max-width: 580px) {
+    .advantages {
+        padding-bottom: 24px;
+
+        &__title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    .advantages__skills {
+        padding: 54px 0;
+        margin: 0 auto;
+        max-width: 280px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantages__skill {
+        margin-bottom: 56px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

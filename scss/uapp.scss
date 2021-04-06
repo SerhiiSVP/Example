@@ -1,0 +1,101 @@
+@import 'mixins.scss';
+
+.uapp {
+    padding: 32px 0 96px;
+}
+
+.uapp__title {
+    margin: 0 auto 64px;
+    max-width: 28%;
+
+    &-logo {
+        width: 100%;
+    }
+}
+
+.uapp__info {
+    display: flex;
+    justify-content: space-around;
+
+    &-paragraph {
+        max-width: 40%;
+    }
+
+    &-text {
+        max-width: 456px;
+        font-weight: 400;
+        @include make-font-size (18px, 25px);
+    }
+}
+
+.uapp__btn {
+    margin-top: 80px;
+    text-align: center;
+
+    & .button {
+        display: inline-block;
+        padding: 16px 48px;
+    }
+}
+
+////////// Adaptive ----------
+
+@media screen and (max-width: 1200px) {
+    .uapp__info-paragraph {
+        max-width: 45%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .uapp {
+        padding-bottom: 32px;
+    }
+    
+    .uapp__title {
+        margin-bottom: 40px;
+        // max-width: 196px;
+    }
+    
+    .uapp__info-text {
+        @include make-font-size (14px, 20px);
+    }
+    
+    .uapp__btn {
+        margin-top: 40px;
+    
+        & .button {
+            padding: 8px 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .uapp {
+        padding-bottom: 8px;
+    }
+	
+    .uapp__title {
+        min-width: 168px;
+    }
+
+    .uapp__info {
+        flex-direction: column;
+        align-items: center;
+
+        &-paragraph {
+            max-width: 100%;
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-text {
+            max-width: 422px;
+            text-align: center;
+        }
+    }
+
+}

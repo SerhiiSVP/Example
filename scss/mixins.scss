@@ -1,0 +1,8 @@
+@mixin make-font-size($font-size, $line-height) {
+    font-size: $font-size;
+    line-height: $line-height;
+};
+
+$bg-color: #413F49; // Фоновый цвет для карточек
+
+$box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1), 0px 8px 8px rgba(0, 0, 0, 0.15); // тень карточек

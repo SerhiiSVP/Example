@@ -1,0 +1,50 @@
+@import 'mixins.scss';
+
+.course {
+    padding: 32px 0 96px;
+}
+
+.course__title {
+    margin-bottom: 56px;
+}
+
+.course__info {
+    background: $bg-color;
+    border-radius: 27px;
+    box-shadow: $box-shadow;
+    width: 100%;
+    height: 672px;
+}
+
+// Adaptive ------------------
+
+@media screen and (max-width: 960px) {
+    .course {
+        padding-bottom: 8px;
+    }
+    
+    .course__title {
+        margin-bottom: 40px;
+
+        & h2 {
+            @include make-font-size (24px, 28px);
+        }
+    }
+
+    .course__info {
+        border-radius: 60px;
+        height: 394px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .course__title {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .course__info {
+        border-radius: 20px;
+        height: 779px;
+    }
+}
